@@ -10,23 +10,20 @@ const printData = (pokemonSelect = "") =>{
 fetch(`${URL}/pokemon/${pokemonSelect}`)
 .then((resp)=>resp.json())
 .then((data)=>{
-   console.log(data)})
-//    printPokemon(data)})
+//    console.log(data)
+   printPokemon(data)})
 
 // .catch((error)=>console.log(error))
 }
-// printData(pokemonSelect)
-printData("bulbasaur")
+printData(pokemonSelect)
+// printData("bulbasaur")
 
 
-printPokemon = () =>{
+printPokemon = (data) =>{
   
-   container.innerHtml =`
+   container.innerHTML =`
     <div class="card-image">
-    <figure class="image is-4by3">
-      <img  alt="Placeholder image">
-    </figure>
-  </div>
+  
   <div class="card-content">
     <div class="media">
       <div class="media-left">
