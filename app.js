@@ -23,7 +23,10 @@ printPokemon = (data) =>{
   
    container.innerHTML =`
     <div class="card-image">
-  
+    <figure class="image class="image is-128x128">
+      <img src="${data.sprites.front_default}"  alt="Placeholder image">
+    </figure>
+  </div>
   <div class="card-content">
     <div class="media">
       <div class="media-left">
